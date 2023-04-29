@@ -7,5 +7,5 @@ interface IContentButton {
 }
 
 export const ContentButton: FC<IContentButton> = ({ text }) => (
-  <button className={styles.contentButton}>{text}</button>
+  <button className={styles.contentButton}><a href={"https://forms.gle/SQ7h1vU7YfEvmMrV6"}>{text}</a></button>
 );

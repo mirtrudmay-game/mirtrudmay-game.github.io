@@ -7,5 +7,5 @@ interface INavButton {
 }
 
 export const NavButton: FC<INavButton> = ({ text }) => (
-  <button className={styles.navButton}>{text}</button>
+  <button className={styles.navButton}><a href={"https://forms.gle/SQ7h1vU7YfEvmMrV6"}>{text}</a></button>
 );
