@@ -1,0 +1,21 @@
+@import "@src/variables.less";
+@import (less)"@src/global.less";
+
+.page {
+  ._resizedPage;
+}
+
+.container {
+  ._container;
+
+  @media(max-width: 1250px) {
+    max-width: 900px;
+  }
+}
+
+.content {
+  ._content;
+
+  height: content-box;
+}
+

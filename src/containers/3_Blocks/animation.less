@@ -1,0 +1,14 @@
+#Vector {
+    transform: translateX(-50%) translateY(-50%) scaleX(var(--fgmtn-scale-x)) scaleY(var(--fgmtn-scale-y)) rotate(var(--fgmtn-rotation));
+    animation: Vector__rotation__1 60000ms 0ms linear forwards;
+}
+
+@keyframes Vector__rotation__1 {
+    from {
+        --fgmtn-rotation: 0deg;
+    }
+
+    to {
+        --fgmtn-rotation: -1440deg;
+    }
+}

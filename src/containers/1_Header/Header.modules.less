@@ -1,0 +1,99 @@
+@import "@src/variables.less";
+@import (less)"@src/global.less";
+
+@vector_l: "../../assets/vectors_header/left_vector.svg";
+@vector_r: "../../assets/vectors_header/right_vector.svg";
+
+.page {
+  ._decoratedPage;
+
+  &:after {
+    background-image:
+            url(@vector_l),
+            url(@vector_r);
+    background-position:
+              top -250px left 0,
+              right 0 bottom 0;
+    filter: blur(200px);
+    border-radius: 400px;
+    opacity: 0.7;
+    z-index: -1;
+  }
+
+  @media(@_md) {
+    padding: 5vh 0 10vh;
+  }
+
+}
+
+.container {
+  ._container
+}
+
+.content {
+  display: grid;
+  grid-gap: 0 20px;
+  grid-template-columns: 1.25fr 1fr;
+  grid-template-rows: 1.15fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 0;
+  min-width: 0;
+
+  @media(@_xl) {
+    justify-items: center;
+  }
+
+  @media(@_md) {
+    grid-template-rows: 1fr;
+  }
+
+  @media(@_sm) {
+    grid-template-columns: 1fr;
+    grid-template-rows: fit-content(100%) 1fr;
+    justify-items: start;
+  }
+}
+
+.title {
+  margin-bottom: 2vh;
+}
+
+.titleText {
+  font-weight: 600;
+  line-height: 119%;
+  font-size: clamp(1.2em, calc(1em + 1.25vw), 2.625em);
+  color: @black-color;
+}
+
+.colorTitleText {
+  .titleText;
+  color: @blue-text-color;
+}
+
+.description {
+  color: @grey-text-color;
+  font-size: min(1em + 0.1vw, 18px);
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0.05em;
+  max-width: 380px;
+  margin-bottom: 3.5vh;
+
+  @media(@_sm) {
+    font-size: 1em;
+  }
+}
+
+.builder {
+  align-self: start;
+  justify-self: center;
+
+  @media(@_md) {
+   display: none;
+  }
+}
+
+
+

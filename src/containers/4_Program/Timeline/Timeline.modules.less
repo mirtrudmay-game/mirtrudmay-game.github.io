@@ -1,0 +1,72 @@
+@import "@src/variables.less";
+
+
+.timelineWrapper {
+  display: flex;
+  justify-content: end;
+  margin-left: 180px;
+}
+
+.timeline {
+  border-left: @timeline_line solid @purple-color;
+  color: @grey-text-color;
+  position: relative;
+  padding: @timeline_spacing 0 @timeline_spacing @timeline_spacing;
+  list-style: none;
+  text-align: left;
+  max-width: 100%;
+}
+
+.event {
+  padding-bottom: (@timeline_spacing * 0.5);
+  margin-bottom:  (@timeline_spacing * 0.5);
+  position: relative;
+
+  &:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+  }
+
+  &:before, &:after {
+    position: absolute;
+    display: block;
+  }
+
+  &:before {
+    left: (((@timeline_date * 0.6) + @timeline_spacing + @timeline_line + @timeline_dot) * 1.5) * -1;
+    color:@purple-color;
+    content: attr(data-date);
+    text-align: right;
+    min-width: @timeline_date;
+    top: 5px;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2em;
+    letter-spacing: 0.05em;
+  }
+
+  &:after {
+    left: (@timeline_spacing + @timeline_line + (@timeline_dot * 0.40)) * -1;
+    background: @purple-color;
+    border-radius: 50%;
+    height: @timeline_dot;
+    width: @timeline_dot;
+    content: "";
+    top: 10px;
+  }
+}
+
+.titleText {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.1em;
+  letter-spacing: 0.06em;
+}
+
+.desc {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1.1em;
+}
