@@ -1,7 +1,7 @@
 {
   "name": "mirtrudmay",
   "version": "1.0.0",
-  "homepage": "http//mirtrudmay-game.github.io",
+  "homepage": "https://mirtrudmay-game.github.io/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
