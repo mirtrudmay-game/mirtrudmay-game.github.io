@@ -1,12 +1,8 @@
-/*@import "@src/variables.less";*/
 @import (less)"@src/global.less";
 
 @vector: "../../assets/blocks/vector.svg";
-@hash_l: "@src/assets/blocks/left_hash.png";
-@hash_r: "@src/assets/blocks/right_hash.png";
-@hash: "@src/assets/blocks/hash.png";
 
-.page{
+.page {
   ._decoratedPage;
   ._resizedPage;
 
@@ -14,18 +10,31 @@
     height: 300%;
     background-image: url(@vector);
     background-position: left 0 top -350px;
+    background-repeat: no-repeat;
+    background-size: cover;
     filter: blur(200px);
     border-radius: 400px;
     opacity: 0.9;
     z-index: -2;
   }
+}
 
-  &::after {
-    background-image: url(@hash);
-    background-position: left 0 top 150px;
-    background-size: contain;
-    z-index: -1;
-  }
+.hash_l {
+  position: absolute;
+  height: 80%;
+  top: 20%;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hash_r {
+  position: absolute;
+  height: 80%;
+  top: 20%;
+  right: 0;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .container {
@@ -55,24 +64,6 @@
 .image {
   position: relative;
 
-/*  &:before {
-    content: "";
-    position: absolute;
-    height: 90%;
-    width: 15vw;
-    top: 5%;
-    left: -15vw;
-
-    background-image: url(@hash_l);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-y: center;
-
-    @media(@_lg) {
-      display: none;
-    }
-  }*/
-
   & img {
     max-height: 100%;
     position: absolute;
@@ -87,24 +78,6 @@
   align-self: start;
   justify-self: start;
   padding: 10% 0;
-
-/*  &:after {
-    content: "";
-    position: absolute;
-    height: 90%;
-    width: 15vw;
-    top: 2.5%;
-    left: 100%;
-
-    background-image: url(@hash_r);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-y: center;
-
-    @media(@_lg) {
-      display: none;
-    }
-  }*/
 }
 
 .description {

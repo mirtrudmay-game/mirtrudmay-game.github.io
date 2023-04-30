@@ -1,9 +1,84 @@
 @import "@src/variables.less";
 @import (less)"@src/global.less";
 
+@wave_l: "@src/assets/blocks/wave_left.svg";
+@wave_r: "@src/assets/blocks/wave_right.svg";
+
 .page {
   ._resizedPage;
+
+  position: relative;
+  /*overflow: hidden;*/
+
+  /*._decoratedPage;*/
+
+/*  &:after {
+    height: 80%;
+    width: 50%;
+    top: 20%;
+    left: -50px;
+
+    background-image: url(@wave_l);
+    background-position: left 0 bottom 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  &:before {
+    height: 80%;
+    top: 20%;
+    left: 100px;
+
+    background-image: url(@wave_r);
+    background-position: right 0 bottom 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }*/
 }
+
+.wave_l {
+  position: absolute;
+  height: 95%;
+  width: 22.5%;
+  top: 20%;
+  left: clamp(-375px, calc((100% - 1170px) / 2 - 22.5%), 0px);
+  object-fit: cover;
+  object-position: right;
+
+  @media(@_xxl) {
+    width: auto;
+    left: -250px;
+    object-fit: contain;
+  }
+}
+
+
+.wave_r {
+  position: absolute;
+  height: 95%;
+  width: calc(22.5% + 150px);
+  top: 22.5%;
+  right: clamp(-550px, calc((100% - 1170px) / 2 - 22.5%), 150px);
+  object-fit: cover;
+  object-position: left;
+
+  @media(@_xxl) {
+    width: auto;
+    right: -350px;
+  }
+
+  @media(@_xl) {
+    height: 80%;
+    top: 30%;
+  }
+
+  @media(@_md) {
+   display: none;
+  }
+}
+
 
 .container {
   ._container;
