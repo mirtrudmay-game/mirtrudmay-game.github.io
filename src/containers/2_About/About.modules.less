@@ -8,6 +8,9 @@
   ._decoratedPage;
   ._resizedPage;
 
+  // Быстрый фикс скролла из-за анимации.
+  overflow: hidden;
+
   /*&::before {
     top: -20%;
     background-image: url(@vector);
@@ -28,6 +31,7 @@
 
 .container {
   ._container;
+  max-width: @container_width_lg;
 }
 
 .content {

@@ -1,6 +1,6 @@
 import styles from './Blocks.modules.less';
 import React from 'react';
-import student from '@src/assets/student_girl_animation.svg';
+import student from '@src/assets/student_girl.png';
 import { Title } from '@src/components/Title/Title';
 
 export function Blocks() {
@@ -8,6 +8,7 @@ export function Blocks() {
     <section className={styles.page}>
       <Title title={'блоки с заданием'} />
       <div className={styles.container}>
+
         <div className={styles.content}>
           <div className={styles.image}>
             <img src={student}></img>
@@ -19,7 +20,7 @@ export function Blocks() {
               <br /> Каждый блок посвящен определенной деятельности:
             </p>
 
-            <div className={styles.blocksWrapper}>
+            <div className={styles.blocksListWrapper}>
               <ul className={styles.blocksList}>
                 <li className={styles.listElement}>педагогика</li>
                 <li className={styles.listElement}>медицина</li>
