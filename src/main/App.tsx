@@ -17,8 +17,8 @@ export const App = () => (
       <Header />
       <About />
       <Blocks />
-      {/*<Program />
-      <Toggles />*/}
+      <Program />
+      {/*<Toggles />*/}
     </main>
     {/*<footer className={styles.footer}>
       <Footer />
