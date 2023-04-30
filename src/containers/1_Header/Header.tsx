@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Header.modules.less';
 import teacher_and_doctor from '@src/assets/teacher_and_doctor.png';
-import builder from '@src/assets/builder.png';
+import builder from '@src/assets/builder2.png';
 import { ContentButton } from '@src/components/Button/ContentButton';
 
 export const Header = () => (

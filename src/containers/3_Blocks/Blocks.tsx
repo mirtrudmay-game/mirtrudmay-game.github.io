@@ -1,5 +1,5 @@
 import styles from './Blocks.modules.less';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import student from '@src/assets/student_girl.png';
 import { Title } from '@src/components/Title/Title';
 
