@@ -1,5 +1,6 @@
 import React from 'react';
-import student from '@src/assets/student_with_text.png';
+import student from '@src/assets/student.png';
+import animated_text from "@src/assets/animated_text.svg"
 import { Title } from '@src/components/Title/Title';
 import styles from './About.modules.less';
 
@@ -7,7 +8,9 @@ export function About() {
   return (
     <section className={styles.page}>
       <div className={styles.container}>
+
         <Title title='о проекте' />
+
         <div className={styles.content}>
           <div className={styles.promo}>
             <div className={styles.text}>
@@ -24,6 +27,7 @@ export function About() {
           </div>
 
           <div className={styles.image}>
+            <img src={animated_text} id={"#Vector"} className={styles.animation}/>
             <img src={student} alt='' />
           </div>
         </div>
