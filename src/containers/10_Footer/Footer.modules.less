@@ -27,16 +27,15 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: max-content max-content max-content;
   grid-template-areas:
-"L I C"
-"P I C"
-". . CR";
+      "L I C"
+      "P I C"
+      ". . CR";
   grid-gap: 10px 100px;
   justify-items: start;
 
   @media(@_lg) {
     padding: 170px 0 0 10%;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr max-content max-content;
     grid-template-areas:
           "L I"
           "C I"
@@ -46,21 +45,13 @@
 
   @media(@_sm) {
     padding: 170px 0 50px 5%;
+    grid-template-areas:
+          "L I"
+          "P I"
+          "C C"
+          "CR CR";
   }
 
-  @media(@_xs) {
-    padding: 150px 0 70px 10%;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, max-content);
-    grid-template-areas:
-            "L"
-            "I"
-            "C"
-            "P"
-            "CR";
-    align-items: center;
-    grid-gap: 5% 0;
-  }
 }
 
 .logo {
@@ -75,14 +66,24 @@
   grid-area: P;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  /*justify-content: space-between;
+  height: 100%;*/
+  @media(@_sm) {
+    margin-bottom: 20px;
+  }
 
   @media(@_lg) {
     & .title {
       display: none;
     }
   }
+
+  @media(@_sm) {
+    & .title {
+      display: block;
+    }
+  }
+
 
 }
 
@@ -97,9 +98,6 @@
 .copyright {
   grid-area: CR;
 
-  @media(@_xs) {
-    justify-self: end;
-  }
 }
 
 .text {

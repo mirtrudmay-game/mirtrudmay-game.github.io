@@ -6,20 +6,19 @@
 }
 
 .toggles {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   padding: @page_padding 0;
-}
 
-.toggle1, .toggle2 {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%,0);
-}
+  & img {
+    margin-top: -15px;
+  }
 
-.toggle1 {
-  top: 0;
-}
+  @media(@_sm) {
+    padding: calc(2 * @page_padding) 0;
+  }
 
-.toggle2 {
-  top: 15px;
 }

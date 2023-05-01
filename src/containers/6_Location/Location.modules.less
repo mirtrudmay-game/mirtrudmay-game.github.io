@@ -3,10 +3,6 @@
 
 .page {
   padding: @page_padding 0;
-
-  @media(@_md) {
-    padding: @page_padding 0;
-  }
 }
 
 .container {
@@ -29,20 +25,28 @@
 }
 
 .image {
-  order: 2;
   z-index: -1;
+
+  @media(@_xs) {
+    order: 2;
+    justify-self: center;
+  }
 }
 
 .location {
-  order: 1;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media(@_xs) {
-    justify-content: center;
+    justify-self: center;
+    order: 1;
   }
 }
 
 .textBlock {
   margin-bottom: 3em;
+  width: 100%;
 
   @media(@_sm) {
     margin-bottom: 2em;

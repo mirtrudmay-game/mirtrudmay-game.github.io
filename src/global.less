@@ -25,7 +25,11 @@
 ._container {
   max-width: @container_width_md;
   margin: 0 auto;
-  padding: 0 min(5vw, 20px);
+  padding: 0 @container_padding;
+
+  @media(@_xs) {
+    padding: 0 calc(@container_padding/2);
+  }
 
 }
 

@@ -7,48 +7,29 @@
 .page {
   ._resizedPage;
 
-  position: relative;
+  overflow-x: hidden;
 }
 
 .wave_l {
   position: absolute;
-  height: 95%;
-  width: 22.5%;
-  top: 20%;
+  height: 75%;
+  top: 25%;
   left: clamp(-375px, calc((100% - 1170px) / 2 - 22.5%), 0px);
   object-fit: cover;
   object-position: right;
 
-  @media(@_xxl) {
-    width: auto;
-    left: -250px;
-    object-fit: contain;
-  }
-
-  @media(@_xl) {
-    top: 15%;
+  @media(@_xs) {
+    display: none;
   }
 }
 
-
 .wave_r {
   position: absolute;
-  height: 95%;
-  width: calc(22.5% + 150px);
-  top: 22.5%;
-  right: clamp(-550px, calc((100% - 1170px) / 2 - 22.5%), 150px);
+  height: 75%;
+  top: 25%;
+  right: clamp(-550px, calc((100% - 1170px) / 2 - 22.5% - 80px), 80px);
   object-fit: cover;
   object-position: left;
-
-  @media(@_xxl) {
-    width: auto;
-    right: -350px;
-  }
-
-  @media(@_xl) {
-    height: 80%;
-    top: 30%;
-  }
 
   @media(@_md) {
    display: none;

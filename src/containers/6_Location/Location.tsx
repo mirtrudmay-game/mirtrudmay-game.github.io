@@ -21,31 +21,30 @@ const TextBlock: FC<ITextBlock> = ({ title, desc }) => (
 export function Location() {
   return (
     <section className={styles.page}>
-      {/*<img srcset={} src={}></img>*/}
+      {/*<img srcset={} src={}></img>*/}{/*      <img src={waveL_xl} sizes="(max-width: 1600px) 10vw, 20vw"
+           srcSet={`${waveL_xl} 390w, ${waveL_md} 250w`}/>*/}
 
       <div className={styles.container}>
         <Title title={'локация'} />
 
         <div className={styles.content}>
           <div className={styles.image}>
-            <img srcSet={`${phone_xl} 1200w, ${phone_xs} 767w`} src={phone_xl} alt={''}></img>
+            <img srcSet={`${phone_xl} 1386w, ${phone_xs} 980w`} sizes={`(min-width: 767px) 50vw, 70vw`} alt={''}></img>
           </div>
 
           <div className={styles.location}>
-            <div>
-              <TextBlock
-                title={'где?'}
-                desc={
-                  <html>
-                  Дворец Молодежи Рыбинска
-                  <br />
-                  (ул.Луговая, 17)
-                  </html>
-                }
-              />
-              <TextBlock title={'когда?'} desc={'27 мая в 12:30'} />
-              <ContentButton text={'Хочу участвовать'} />
-            </div>
+            <TextBlock
+              title={'где?'}
+              desc={
+                <html>
+                Дворец Молодежи Рыбинска
+                <br />
+                (ул.Луговая, 17)
+                </html>
+              }
+            />
+            <TextBlock title={'когда?'} desc={'27 мая в 12:30'} />
+            <ContentButton text={'Хочу участвовать'} />
           </div>
         </div>
       </div>

@@ -9,44 +9,11 @@
   ._resizedPage;
 
   overflow: hidden;
-
- /* &::before {
-    content:"";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-
-    background-image: url(@vector);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left 0 top 0;
-    background-repeat: no-repeat;
-
-    filter: blur(200px);
-    border-radius: 400px;
-    z-index: -2;
   }
 
-  &&::after {
-    content:"";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-
-    background-image: url(@bands);
-    background-position: left 0 top 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
-  }*/
-}
-
 .container {
-  ._container;
+  &:extend(._container);
+
   max-width: @container_width_lg;
 }
 
@@ -67,13 +34,15 @@
   }
 
   @media(@_sm) {
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 0.25fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: fit-content(35%) fit-content(35%) fit-content(20%);
   }
 
   @media(@_xs) {
-    grid-template-rows: 1fr 0.25fr 1fr;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: repeat(3, max-content);
   }
+
 
 }
 
@@ -84,7 +53,7 @@
   background-position: center;
 
   max-height: 85%;
-  padding-left: 22.5%;
+  padding-left: 25%;
 
   @media(@_lg) {
     max-height: 100%;
@@ -94,12 +63,24 @@
     grid-column: 1/3;
     grid-row: 1/2;
   }
+}
 
-  @media(@_sm) {
-    grid-column: 1/3;
-    grid-row: 1/3;
-    padding: 0 20%;
-  }
+.promoTop {
+  &:extend(.promo);
+
+  grid-column: 1/3;
+  grid-row: 1/2;
+  padding: 20%;
+  width: 100%;
+}
+
+.promoBottom {
+  &:extend(.promo);
+
+  grid-column: 2/4;
+  grid-row: 2/3;
+  padding: 22.5%;
+  width: 100%;
 }
 
 .text {
@@ -116,14 +97,8 @@
 
   @media(@_sm) {
     text-align: center;
-    height: 85%;
     max-width: 100%;
   }
-
-  @media(@_xs) {
-    height: 85%;
-  }
-
 }
 
 .text > p {
@@ -137,13 +112,9 @@
     margin-bottom: 0;
   }
 
-/*  @media(@_xl) {
-    font-size: 1em;
-  }*/
-
-/*  @media(@_md) {
-    font-size: 0.9em;
-  }*/
+  @media(@_sm) {
+    margin-bottom: 0;
+  }
 
 }
 
@@ -154,6 +125,7 @@
   justify-content: center;
   position: relative;
   z-index: 5;
+  margin: 5%;
 
   & img {
     max-height: 100%;
@@ -165,8 +137,9 @@
   }
 
   @media(@_sm) {
-    grid-column: 2/3;
-    grid-row: 2/4;
+    grid-column: 1/4;
+    grid-row: 3/4;
+    max-height: 500px;
   }
 }
 
