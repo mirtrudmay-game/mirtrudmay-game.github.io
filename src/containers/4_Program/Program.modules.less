@@ -8,34 +8,6 @@
   ._resizedPage;
 
   position: relative;
-  /*overflow: hidden;*/
-
-  /*._decoratedPage;*/
-
-/*  &:after {
-    height: 80%;
-    width: 50%;
-    top: 20%;
-    left: -50px;
-
-    background-image: url(@wave_l);
-    background-position: left 0 bottom 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-
-  &:before {
-    height: 80%;
-    top: 20%;
-    left: 100px;
-
-    background-image: url(@wave_r);
-    background-position: right 0 bottom 0;
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
-  }*/
 }
 
 .wave_l {
@@ -51,6 +23,10 @@
     width: auto;
     left: -250px;
     object-fit: contain;
+  }
+
+  @media(@_xl) {
+    top: 15%;
   }
 }
 
