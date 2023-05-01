@@ -10,9 +10,19 @@
 }
 
 .main {
+  min-height: 100%;
   flex-grow: 1;
 }
 
 .footer {
   flex-grow: 0;
+  margin-top: calc(-1 * (@footer_height));
+
+  @media(@_md) {
+    margin-top: calc(-1 * (@footer_height - @footer_offset));
+  }
+
+  @media(@_md) {
+    margin-top: calc(-1 * (@footer_height - 1.5 *@footer_offset));
+  }
 }

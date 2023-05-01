@@ -2,7 +2,11 @@
 @import (less)"@src/global.less";
 
 .page {
-  ._resizedPage;
+  padding: @page_padding 0;
+
+  @media(@_md) {
+    padding: @page_padding 0;
+  }
 }
 
 .container {
@@ -14,25 +18,58 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media(@_sm) {
+    grid-gap: 5% 0;
+  }
+
+  @media(@_xs) {
+    grid-template-columns: 1fr;
+  }
 }
 
-.text {
+.image {
+  order: 2;
+  z-index: -1;
+}
+
+.location {
+  order: 1;
+  display: flex;
+  @media(@_xs) {
+    justify-content: center;
+  }
+}
+
+.textBlock {
   margin-bottom: 3em;
+
+  @media(@_sm) {
+    margin-bottom: 2em;
+  }
 }
 
 .subtitle {
   color: @purple-text-color;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: calc(1em + 0.8vw);
+  font-size: calc(1em + 0.75vw);
   line-height: 1.2em;
   letter-spacing: 0.16em;
+
+  @media(@_sm) {
+    font-size: calc(1em + 1vw);
+  }
 }
 
 .description {
   color: @purple-text-color;
   font-weight: 500;
-  font-size: calc(1em + 0.4vw);
+  font-size: calc(1em + 0.3vw);
   line-height: 1.2em;
   letter-spacing: 0.05em;
+
+  @media(@_sm) {
+    font-size: calc(1em + 0.5vw);
+  }
 }

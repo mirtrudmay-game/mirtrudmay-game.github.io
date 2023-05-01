@@ -9,6 +9,7 @@ import { About } from '@src/containers/2_About/About';
 import { Toggles } from '@src/containers/5_Toggle/Toggles';
 
 import styles from './App.modules.less';
+import { Location } from '@src/containers/6_Location/Location';
 
 export const App = () => (
   <div className={styles.wrapper}>
@@ -18,10 +19,11 @@ export const App = () => (
       <About />
       <Blocks />
       <Program />
-      {/*<Toggles />*/}
+      <Toggles />
+      <Location/>
     </main>
-    {/*<footer className={styles.footer}>
+    <footer className={styles.footer}>
       <Footer />
-    </footer>*/}
+    </footer>
   </div>
 );

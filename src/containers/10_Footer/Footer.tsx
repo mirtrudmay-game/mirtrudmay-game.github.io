@@ -8,15 +8,11 @@ function Footer() {
     <div className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.promo}>
+          <div className={styles.logo}>
             <Logo height={50} fontSize={16} />
-            <h4 className={styles.title}>Присоединяйся к нам в соцсетях!</h4>
-            <a href={'#'} className={styles.vk}>
-              <img src={vk} alt={'Ссылка на группу ВКонтакте'}></img>
-            </a>
           </div>
 
-          <div>
+          <div className={styles.info}>
             <h4 className={styles.title}>Информация</h4>
             <nav className={styles.text}>
               <ul>
@@ -50,12 +46,19 @@ function Footer() {
             </nav>
           </div>
 
-          <div>
+          <div className={styles.contacts}>
             <h4 className={styles.title}>Контакты</h4>
             <div className={styles.text}>
               <span>mirtrudmay.game@gmail.com</span>
             </div>
           </div>
+          <div className={styles.promo}>
+            <h4 className={styles.title}>Присоединяйся к нам в соцсетях!</h4>
+            <a href={'#'} className={styles.vk}>
+              <img src={vk} alt={'Ссылка на группу ВКонтакте'}></img>
+            </a>
+          </div>
+
           <span className={styles.copyright}>© МирТрудМай, 2023</span>
         </div>
       </div>

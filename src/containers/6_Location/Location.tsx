@@ -1,9 +1,10 @@
 import styles from './Location.modules.less';
 import React, { FC } from 'react';
-import phone from '@src/assets/phone.png';
 import '@src/variables.less';
 import { ContentButton } from '@src/components/Button/ContentButton';
 import { Title } from '@src/components/Title/Title';
+import phone_xl from '@src/assets/phone.png';
+import phone_xs from '@src/assets/phone_xs.png';
 
 interface ITextBlock {
   title: string;
@@ -11,7 +12,7 @@ interface ITextBlock {
 }
 
 const TextBlock: FC<ITextBlock> = ({ title, desc }) => (
-  <div className={styles.text}>
+  <div className={styles.textBlock}>
     <h3 className={styles.subtitle}>{title}</h3>
     <span className={styles.description}>{desc} </span>
   </div>
@@ -20,27 +21,31 @@ const TextBlock: FC<ITextBlock> = ({ title, desc }) => (
 export function Location() {
   return (
     <section className={styles.page}>
+      {/*<img srcset={} src={}></img>*/}
+
       <div className={styles.container}>
         <Title title={'локация'} />
 
         <div className={styles.content}>
           <div className={styles.image}>
-            <img src={phone} alt={''}></img>
+            <img srcSet={`${phone_xl} 1200w, ${phone_xs} 767w`} src={phone_xl} alt={''}></img>
           </div>
 
-          <div className={styles.text}>
-            <TextBlock
-              title={'где?'}
-              desc={
-                <html>
+          <div className={styles.location}>
+            <div>
+              <TextBlock
+                title={'где?'}
+                desc={
+                  <html>
                   Дворец Молодежи Рыбинска
                   <br />
                   (ул.Луговая, 17)
-                </html>
-              }
-            />
-            <TextBlock title={'когда?'} desc={'27 мая в 12:30'} />
-            <ContentButton text={'Хочу участвовать'} />
+                  </html>
+                }
+              />
+              <TextBlock title={'когда?'} desc={'27 мая в 12:30'} />
+              <ContentButton text={'Хочу участвовать'} />
+            </div>
           </div>
         </div>
       </div>

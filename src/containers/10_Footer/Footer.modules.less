@@ -2,18 +2,18 @@
 @import (less)"@src/global.less";
 
 .footer {
-  color: @white-color;
-  height: max-content;
+  min-height: @footer_height;
   background-image:
-          url("@src/assets/footer_3.svg"),
-          url("@src/assets/footer_2.svg"),
-          url("@src/assets/footer_1.svg");
+      url("@src/assets/footer_3.svg"),
+      url("@src/assets/footer_2.svg"),
+      url("@src/assets/footer_1.svg");
   background-position:
-          top 60px center,
-          top 30px center,
-          top 0 center;
+      top 60px center,
+      top 30px center,
+      top 0 center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: @white-color;
 }
 
 .container {
@@ -21,40 +21,96 @@
 }
 
 .content {
+  padding: 180px 0 10px;
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 50px;
+  grid-template-rows: max-content max-content max-content;
+  grid-template-areas:
+"L I C"
+"P I C"
+". . CR";
   grid-gap: 10px 100px;
   justify-items: start;
-  align-items: start;
-  padding: 180px 0 5px 0;
 
-  @media(@_xl) {
-    padding: 150px 0 5px 0;
+  @media(@_lg) {
+    padding: 170px 0 0 10%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr max-content max-content;
+    grid-template-areas:
+          "L I"
+          "C I"
+          "P I"
+          ". CR";
+  }
+
+  @media(@_sm) {
+    padding: 170px 0 50px 5%;
+  }
+
+  @media(@_xs) {
+    padding: 150px 0 70px 10%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, max-content);
+    grid-template-areas:
+            "L"
+            "I"
+            "C"
+            "P"
+            "CR";
+    align-items: center;
+    grid-gap: 5% 0;
   }
 }
 
-.copyright {
-  grid-column: 3;
-  justify-self: start;
+.logo {
+  grid-area: L;
+
+  @media(@_xs) {
+   width: 40px;
+  }
 }
 
 .promo {
+  grid-area: P;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+
+  @media(@_lg) {
+    & .title {
+      display: none;
+    }
+  }
+
+}
+
+.info {
+  grid-area: I;
+}
+
+.contacts {
+  grid-area: C;
+}
+
+.copyright {
+  grid-area: CR;
+
+  @media(@_xs) {
+    justify-self: end;
+  }
 }
 
 .text {
   font-weight: 400;
-  font-size: calc(1em);
+  font-size: 1em;
   line-height: 1.6em;
 }
 
 .title {
   font-weight: 700;
-  font-size: calc(1em + 0.3vw);
+  font-size: calc(1em + 0.15vw);
   line-height: 165%;
 }
 
