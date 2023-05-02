@@ -24,13 +24,13 @@ export const Header = () => (
         </div>
 
         <div className={styles.image}>
-          <img srcSet={`${teacher_and_doctor_xl} 1920w, ${teacher_and_doctor_xs} 767px`} src={teacher_and_doctor_xl}
+          <img sizes='(min-width: 992px) 40vw, 90vw' srcSet={`${teacher_and_doctor_xl} 1360w, ${teacher_and_doctor_xs} 940w`} src={teacher_and_doctor_xl}
                alt='учитель и врач' />
         </div>
         <div className={styles.builder}>
           <img src={builder}
-               srcSet={`${builder} 880w, ${builder_xs} 600px`}
-               sizes='(max-width: 992px) 0, 40vw'
+               srcSet={`${builder} 880w, ${builder_xs} 600w`}
+               sizes='(max-width: 767px) 0, 40vw'
                alt='строитель' />
 
         </div>

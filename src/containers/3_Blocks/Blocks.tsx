@@ -15,10 +15,12 @@ export function Blocks() {
       <Title title={'блоки с заданием'} />
       <div className={styles.background}>
         <img className={styles.hash_l}
+             sizes={`(min-width: 767px) 75vw, 0`}
              srcSet={`${hashL_xl} 1920w, ${hashL_md} 1600w, ${hashL_xs} 1200w`}
              src={hashL_xl}
         />
         <img className={styles.hash_r}
+             sizes={`(min-width: 767px) 75vw, 0`}
              srcSet={`${hashR_xl} 1920w, ${hashR_md} 1600w, ${hashR_xs} 1200w`}
              src={hashR_xl}
         />

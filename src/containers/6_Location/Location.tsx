@@ -5,6 +5,9 @@ import { ContentButton } from '@src/components/Button/ContentButton';
 import { Title } from '@src/components/Title/Title';
 import phone_xl from '@src/assets/phone.png';
 import phone_xs from '@src/assets/phone_xs.png';
+import bg_lg from '@src/assets/participate.png'
+import bg_md from '@src/assets/participate_md.png'
+import bg_xs from '@src/assets/participate_xs.png'
 
 interface ITextBlock {
   title: string;
@@ -21,32 +24,35 @@ const TextBlock: FC<ITextBlock> = ({ title, desc }) => (
 export function Location() {
   return (
     <section className={styles.page} id="location">
-      {/*<img srcset={} src={}></img>*/}{/*      <img src={waveL_xl} sizes="(max-width: 1600px) 10vw, 20vw"
-           srcSet={`${waveL_xl} 390w, ${waveL_md} 250w`}/>*/}
+      <div className={styles.background}>
+        <img className={styles.backgroundImg} srcSet={`${bg_lg} 3840w, ${bg_md} 3000w, ${bg_xs} 2040w`}
+             src={bg_lg} sizes={`(min-width: 767px) 100vw, 0vw`} />
 
-      <div className={styles.container}>
-        <Title title={'локация'} />
+        <div className={styles.container}>
+          <Title title={'локация'} />
 
-        <div className={styles.content}>
-          <div className={styles.image}>
-            <img srcSet={`${phone_xl} 1386w, ${phone_xs} 980w`} sizes={`(min-width: 767px) 50vw, 70vw`} alt={''}></img>
-          </div>
+          <div className={styles.content}>
+            <div className={styles.image}>
+              <img srcSet={`${phone_xl} 1386w, ${phone_xs} 980w`} sizes={`(min-width: 767px) 50vw, 100vw`} alt={''}></img>
+            </div>
 
-          <div className={styles.location}>
-            <TextBlock
-              title={'где?'}
-              desc={
-                <html>
-                Дворец Молодежи Рыбинска
-                <br />
-                (ул.Луговая, 17)
-                </html>
-              }
-            />
-            <TextBlock title={'когда?'} desc={'27 мая в 12:30'} />
-            <ContentButton text={'Хочу участвовать'} />
+            <div className={styles.location}>
+              <TextBlock
+                title={'где?'}
+                desc={
+                  <html>
+                  Дворец Молодежи Рыбинска
+                  <br />
+                  (ул.Луговая, 17)
+                  </html>
+                }
+              />
+              <TextBlock title={'когда?'} desc={'27 мая в 12:30'} />
+              <ContentButton text={'Хочу участвовать'} />
+            </div>
           </div>
         </div>
+
       </div>
     </section>
   );

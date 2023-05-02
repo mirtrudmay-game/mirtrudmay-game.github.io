@@ -3,6 +3,8 @@ import student from '@src/assets/student.png';
 import animated_text from "@src/assets/animated_text.svg"
 import { Title } from '@src/components/Title/Title';
 import styles from './About.modules.less';
+import circle from "@src/assets/text_background.svg"
+
 
 export function AboutSM() {
   return (
@@ -12,9 +14,9 @@ export function AboutSM() {
         <Title title='о проекте' />
 
         <div className={styles.content}>
-
             <div className={styles.promoTop}>
               <div className={styles.text}>
+                <img className={styles.circle} src={circle}/>
                 <p>
                   Присоединяйся к нашей интеллектуальной игре, ты узнаешь много
                   нового о профессиях, актуальных и для Ярославской области.
@@ -23,6 +25,7 @@ export function AboutSM() {
             </div>
 
             <div className={styles.promoBottom}>
+              <img className={styles.circle} src={circle}/>
               <div className={styles.text}>
                 <p>
                   Игра будет проходить в рамках квиза в несколько этапов: фильмы и
@@ -31,8 +34,6 @@ export function AboutSM() {
                 </p>
               </div>
             </div>
-
-
 
           <div className={styles.image}>
             <img src={animated_text} id={"#Vector"} className={styles.animation}/>

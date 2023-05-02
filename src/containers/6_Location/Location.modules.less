@@ -1,8 +1,33 @@
 @import "@src/variables.less";
 @import (less)"@src/global.less";
 
+@bg_lg: '@src/assets/participate.png';
+@bg_md: '@src/assets/participate_md.png';
+@bg_xs: '@src/assets/participate_xs.png';
+
 .page {
-  padding: @page_padding 0;
+  ._resizedPage;
+}
+
+.background {
+  position: relative;
+}
+
+.backgroundImg {
+  position: absolute;
+  width: 100%;
+  max-height: 90%;
+  left:0;
+  top: 10%;
+  object-fit: contain;
+  z-index: -1;
+
+  /**
+    КОСТЫЛЬ!!!
+   */
+  @media(@_sm) {
+    display: none;
+  }
 }
 
 .container {

@@ -4,6 +4,7 @@ import student_xs from '@src/assets/student_xs.png';
 import animated_text from "@src/assets/animated_text.svg"
 import vector from "@src/assets/vectors_about/vector.svg"
 import bands from "@src/assets/vectors_about/bands.svg"
+import circle from "@src/assets/text_background.svg"
 import { Title } from '@src/components/Title/Title';
 import styles from './About.modules.less';
 
@@ -11,14 +12,15 @@ import styles from './About.modules.less';
 export function About() {
   return (
     <section className={styles.page} id="about">
-      <img src={vector} className={styles.bg_vector}  sizes={`100vw`}/>
-      <img src={bands} className={styles.bg_bands}  sizes={`100vw`}/>
+      <img src={vector} className={styles.bg_vector} sizes={`100vw`} />
+      <img src={bands} className={styles.bg_bands} sizes='(max-width: 992px) 0, 100vw' />
 
       <div className={styles.container}>
         <Title title='о проекте' />
 
         <div className={styles.content}>
           <div className={styles.promo}>
+            <img className={styles.circle} src={circle}/>
             <div className={styles.text}>
               <p>
                 Присоединяйся к нашей интеллектуальной игре, ты узнаешь много
