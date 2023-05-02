@@ -20,7 +20,7 @@ const TextBlock: FC<ITextBlock> = ({ title, desc }) => (
 
 export function Location() {
   return (
-    <section className={styles.page}>
+    <section className={styles.page} id="location">
       {/*<img srcset={} src={}></img>*/}{/*      <img src={waveL_xl} sizes="(max-width: 1600px) 10vw, 20vw"
            srcSet={`${waveL_xl} 390w, ${waveL_md} 250w`}/>*/}
 

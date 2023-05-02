@@ -7,10 +7,10 @@ const Menu = () => (
   <div className={styles.menu}>
     <nav>
       <ul className={styles.menuNav}>
-        <li className={styles.menuItem}>О проекте</li>
-        <li className={styles.menuItem}>Блоки</li>
-        <li className={styles.menuItem}>Программа мероприятия</li>
-        <li className={styles.menuItem}>Локация</li>
+        <li className={styles.menuItem}><a href={"#about"}>О проекте</a></li>
+        <li className={styles.menuItem}><a href={"#blocks"}>Блоки</a></li>
+        <li className={styles.menuItem}><a href={"#program"}>Программа мероприятия</a></li>
+        <li className={styles.menuItem}><a href={"#location"}>Локация</a></li>
       </ul>
     </nav>
     <div className={styles.button}>

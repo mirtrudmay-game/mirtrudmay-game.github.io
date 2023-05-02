@@ -17,22 +17,22 @@ function Footer() {
             <nav className={styles.text}>
               <ul>
                 <li>
-                  <a href={''} className={styles.navLink}>
+                  <a href={'#about'} className={styles.navLink}>
                     О проекте
                   </a>
                 </li>
                 <li>
-                  <a href={''} className={styles.navLink}>
+                  <a href={'#blocks'} className={styles.navLink}>
                     Блоки
                   </a>
                 </li>
                 <li>
-                  <a href={''} className={styles.navLink}>
+                  <a href={'#program'} className={styles.navLink}>
                     Программа мероприятия
                   </a>
                 </li>
                 <li>
-                  <a href={''} className={styles.navLink}>
+                  <a href={'#location'} className={styles.navLink}>
                     Локация
                   </a>
                 </li>
@@ -49,12 +49,12 @@ function Footer() {
           <div className={styles.contacts}>
             <h4 className={styles.title}>Контакты</h4>
             <div className={styles.text}>
-              <span>mirtrudmay.game@gmail.com</span>
+              <a href={""}><span>mirtrudmay.game@gmail.com</span></a>
             </div>
           </div>
           <div className={styles.promo}>
             <h4 className={styles.title}>Присоединяйся к нам в соцсетях!</h4>
-            <a href={'#'} className={styles.vk}>
+            <a href={'https://vk.com/mirtrudmay.game'} className={styles.vk}>
               <img src={vk} alt={'Ссылка на группу ВКонтакте'}></img>
             </a>
           </div>

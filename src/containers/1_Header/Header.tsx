@@ -7,7 +7,7 @@ import builder_xs from '@src/assets/builder_xs.png';
 import { ContentButton } from '@src/components/Button/ContentButton';
 
 export const Header = () => (
-  <section className={styles.page}>
+  <section className={styles.page} id="header">
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.text}>

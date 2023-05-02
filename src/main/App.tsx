@@ -1,4 +1,5 @@
 import React from 'react';
+import SmoothScroll from "smooth-scroll";
 
 import { Navbar } from '@src/containers/0_Navbar/Navbar';
 import { Header } from '@src/containers/1_Header/Header';
@@ -12,6 +13,11 @@ import styles from './App.modules.less';
 import { Location } from '@src/containers/6_Location/Location';
 import { AboutSM } from '@src/containers/2_About/AboutSM';
 
+export const scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 1000,
+  speedAsDuration: true,
+});
+
 export const App = () => {
   const [width, setWidth] = React.useState(window.innerWidth);
   React.useEffect(() => {
@@ -22,6 +28,9 @@ export const App = () => {
       window.removeEventListener("resize", handleResizeWindow);
     };
   }, []);
+
+
+
 
   return (
     <div className={styles.wrapper}>
