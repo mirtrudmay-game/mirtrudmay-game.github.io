@@ -25,7 +25,7 @@ export function Location() {
   return (
     <section className={styles.page} id="location">
       <div className={styles.background}>
-        <img className={styles.backgroundImg} srcSet={`${bg_lg} 3840w, ${bg_md} 3000w, ${bg_xs} 2040w`}
+        <img className={styles.backgroundImg} srcSet={`${bg_lg} 3840w, ${bg_md} 2400w, ${bg_xs} 1292w`}
              src={bg_lg} sizes={`(min-width: 767px) 100vw, 0vw`} />
 
         <div className={styles.container}>

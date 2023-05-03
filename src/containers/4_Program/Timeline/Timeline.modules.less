@@ -7,7 +7,7 @@
   margin-left: 180px;
 
   @media(@_xs) {
-    margin-left: 155px;
+    margin-left: 150px;
   }
 }
 
@@ -19,12 +19,22 @@
   list-style: none;
   text-align: left;
   max-width: 100%;
+
+  @media(@_xs) {
+    padding: 40px 0 40px 40px;
+  }
+
 }
 
 .event {
   padding-bottom: (@timeline_spacing * 0.5);
   margin-bottom:  (@timeline_spacing * 0.5);
   position: relative;
+
+  @media(@_xs) {
+    padding-bottom: (@timeline_spacing * 0.4);
+    margin-bottom:  (@timeline_spacing * 0.4);
+  }
 
   &:last-of-type {
     padding-bottom: 0;
@@ -44,16 +54,20 @@
     text-align: right;
     min-width: @timeline_date;
     top: 5px;
-    font-size: clamp(1.125em, calc(1em + 1.2vw), 1.5em);
+    font-size: clamp(1.25em, 1em + 1vw, 1.5em);
     font-weight: 800;
     line-height: 1.2em;
     letter-spacing: 0.05em;
 
-    @media(@_xs) {
-      min-width: 120px;
-      left: (((120px * 0.6) + 45px + 4px + 16px) * 1.5) * -1;
+    @media(@_sm) {
+      font-size: 1.25em;
+      font-weight: 700;
     }
 
+    @media(@_xs) {
+      min-width: 110px;
+      left: (((120px * 0.6) + 30px + 4px + 16px) * 1.5) * -1;
+    }
   }
 
   &:after {
@@ -64,19 +78,31 @@
     width: @timeline_dot;
     content: "";
     top: 10px;
+
+    @media(@_xs) {
+      left: (40px + @timeline_line + (@timeline_dot * 0.40)) * -1;
+    }
   }
 }
 
 .title {
-  font-size: clamp(1.125em, calc(1em + 1.2vw), 1.5em);
+  font-size: clamp(1em, 1em + 1vw, 1.5em);
   font-weight: 600;
   line-height: 1.1em;
   letter-spacing: 0.06em;
+
+  @media(@_sm) {
+    font-size: 1.25em;
+  }
 }
 
 .desc {
-  font-size: clamp(1em, calc(1em + 0.15vw), 1.125em);
+  font-size: clamp(0.9em, calc(1em + 0.15vw), 1.125em);
   font-weight: 500;
   letter-spacing: 0.05em;
   line-height: 1.1em;
+
+  @media(@_sm) {
+    font-size: 0.95em;
+  }
 }

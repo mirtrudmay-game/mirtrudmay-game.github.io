@@ -27,12 +27,10 @@
   left: 0;
   z-index: -1;
 
-  /**
-    КОСТЫЛЬ!!!
-   */
   @media(@_md) {
     display: none;
   }
+
 }
 
 .container {
@@ -44,16 +42,26 @@
   ._content;
 
   display: grid;
-  grid-template-columns: fit-content(50%) fit-content(35%);
+  grid-template-columns: fit-content(45%) fit-content(35%);
   justify-content:  space-evenly;
 
+  @media(@_lg) {
+    grid-template-columns: fit-content(50%) fit-content(35%);
+  }
+
   @media(@_md) {
-    grid-template-columns: 2fr 0.8fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
   }
 
   @media(@_sm) {
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 30% 35% fit-content(35%);
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: minmax(210px, 30%) minmax(190px, 25%) 50%;
+    align-items: center;
+  }
+
+  @media(@_xs) {
+    grid-template-columns: 1fr 3.5fr 1fr;
+    grid-template-rows: minmax(265px, 27.5%) minmax(265px, 25%) 45%;
   }
 }
 
@@ -66,42 +74,44 @@
 }
 
 .promo {
-  position: relative;
+  height: 80%;
   padding-left: 20%;
+  position: relative;
 
-  @media(min-width: 1600px) {
-    height: 85%;
+  @media(@_lg) {
+    height: 90%;
   }
 
   @media(@_md) {
     grid-column: 1/3;
     grid-row: 1/2;
-    height: 95%;
   }
-
-  @media(@_sm) {
-    padding-left: 0;
-  }
-
 }
 
 .promoTop {
-  &:extend(.promo);
-
+  position: relative;
   grid-column: 1/3;
   grid-row: 1/2;
 }
 
 .promoBottom {
-  &:extend(.promo);
-
+  position: relative;
   grid-column: 2/4;
   grid-row: 2/3;
 }
 
+.textSM {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 65%;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .text {
   height: 100%;
-  max-width: 77.5%;
+  max-width: 80%;
 
   display: flex;
   flex-direction: column;
@@ -109,12 +119,6 @@
 
   @media(@_md) {
     max-width: min(70%, 340px);
-  }
-
-  @media(@_sm) {
-    text-align: center;
-    align-items: center;
-    display: block;
   }
 }
 
@@ -132,35 +136,34 @@
   @media(@_lg) {
     font-size: 1em ;
   }
-
-  @media(@_sm) {
-    margin-bottom: 0;
-  }
-
-}
-.imageWrapper {
-
 }
 
 .image {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  z-index: 5;
   margin: 5%;
+  z-index: 5;
 
   @media(@_md) {
     grid-column: 2/4;
     grid-row: 1/2;
   }
+}
 
-  @media(@_sm) {
-    grid-column: 1/4;
-    grid-row: 3/4;
-    max-height: 300px;
-  }
+.imageSM {
+  position: relative;
+  z-index: 5;
+  grid-column: 1/4;
+  grid-row: 3/4;
+  margin-top: 15%;
+
+}
+
+.student {
+  position: relative;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%);
+
 }
 
 /**

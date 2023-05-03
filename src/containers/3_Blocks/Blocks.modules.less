@@ -57,25 +57,25 @@
 
 .container {
   ._container;
-  width: 75%;
-
-  @media(@_lg) {
-    width: 100%;
-  }
 }
 
 .content {
   ._content;
 
   display: grid;
-  justify-content: space-evenly;
-  grid-template-columns: 30% 45%;
-  grid-template-rows: minmax(0, 75%);
-  align-content: center;
+  grid-template-columns: 50% 40%;
+  grid-template-rows: minmax(70vh, 1fr);
+  justify-content: start;
 
   @media(@_md) {
     grid-template-columns: 35% 50%;
     justify-content: space-around;
+  }
+
+  @media(@_sm) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.25fr;
+    grid-gap: 5%;
   }
 }
 
@@ -83,19 +83,26 @@
   position: relative;
 
   & img {
-    max-height: 100%;
     position: absolute;
+    height: 100%;
     left: 50%;
     transform: translateX(-40%);
   }
 
+  @media(@_sm) {
+    order: 2;
+  }
 }
 
 .blocks {
-  position: relative;
-  align-self: start;
   justify-self: start;
   padding: 10% 0;
+
+  @media(@_sm) {
+    order: 1;
+    padding: 0;
+    justify-self: center;
+  }
 }
 
 .description {
@@ -104,33 +111,36 @@
   font-weight: 400;
   line-height: 1.2em;
   color: @grey-text-color;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
 
   @media(@_md) {
     font-size: calc(1em + 0.4vw);
   }
-}
 
-.blocksListWrapper {
-  width: max-content;
-  height: max-content;
-  padding: 2.5em;
-  background-image: url("@src/assets/rectangle.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  @media(@_sm) {
+    font-size: calc(1em + 0.5vw);
+    padding-left: 5%;
+  }
 }
 
 .blocksList {
+  position: relative;
+  padding: 5%;
+}
+
+.rectangle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.list {
   font-size: calc(1em + 0.25vw);
   font-weight: 600;
   line-height: 2em;
-
-  padding-right: 2.5em;
-
-  @media(@_xl) {
-    padding-right: 2em;
-  }
 }
 
 .listElement {

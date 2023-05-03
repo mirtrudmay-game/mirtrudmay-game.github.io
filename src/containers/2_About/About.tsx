@@ -13,7 +13,7 @@ export function About() {
   return (
     <section className={styles.page} id="about">
       <img src={vector} className={styles.bg_vector} sizes={`100vw`} />
-      <img src={bands} className={styles.bg_bands} sizes='(max-width: 992px) 0, 100vw' />
+      <img src={bands} className={styles.bg_bands} sizes={`100vw`} />
 
       <div className={styles.container}>
         <Title title='о проекте' />

@@ -39,7 +39,7 @@ export const App = () => {
         <Header />
         {width > 767 ? <About /> : <AboutSM /> }
 
-        {/*<Blocks />*/}
+        <Blocks />
         <Program />
         <Toggles />
         <Location/>

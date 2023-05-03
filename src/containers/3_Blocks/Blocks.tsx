@@ -8,6 +8,7 @@ import hashL_xs from '@src/assets/blocks/hash_l_xs.png'
 import hashR_xl from '@src/assets/blocks/hash_r.png'
 import hashR_md from '@src/assets/blocks/hash_r_md.png'
 import hashR_xs from '@src/assets/blocks/hash_r_xs.png'
+import rectangle from "@src/assets/rectangle.png";
 
 export function Blocks() {
   return (
@@ -15,13 +16,13 @@ export function Blocks() {
       <Title title={'блоки с заданием'} />
       <div className={styles.background}>
         <img className={styles.hash_l}
-             sizes={`(min-width: 767px) 75vw, 0`}
-             srcSet={`${hashL_xl} 1920w, ${hashL_md} 1600w, ${hashL_xs} 1200w`}
+             sizes={`(min-width: 992px) 50vw, 0`}
+             srcSet={`${hashL_xl} 1800w, ${hashL_md} 1200w, ${hashL_xs} 700w`}
              src={hashL_xl}
         />
         <img className={styles.hash_r}
-             sizes={`(min-width: 767px) 75vw, 0`}
-             srcSet={`${hashR_xl} 1920w, ${hashR_md} 1600w, ${hashR_xs} 1200w`}
+             sizes={`(min-width: 992px) 50vw, 0`}
+             srcSet={`${hashR_xl} 1800w, ${hashR_md} 1200w, ${hashR_xs} 700w`}
              src={hashR_xl}
         />
 
@@ -37,8 +38,9 @@ export function Blocks() {
                 <br /> Каждый блок посвящен определенной деятельности:
               </p>
 
-              <div className={styles.blocksListWrapper}>
-                <ul className={styles.blocksList}>
+              <div className={styles.blocksList}>
+                <img className={styles.rectangle} src={rectangle}/>
+                <ul className={styles.list}>
                   <li className={styles.listElement}>педагогика</li>
                   <li className={styles.listElement}>медицина</li>
                   <li className={styles.listElement}>сельское хозяйство</li>
