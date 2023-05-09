@@ -50,7 +50,7 @@
 
 .image {
   position: relative;
-  z-index: -1;
+  z-index: 1;
 
   @media (@_xs) {
     order: 2;
@@ -69,11 +69,13 @@
   margin-left: 0.5em;
 
   @media (@_xs) {
+
     font-size: min(2.2vw, 0.95em);
   }
 
 
   & .smallText {
+    z-index: 10;
     font-size: 0.8em;
     margin-left: 1em;
   }
