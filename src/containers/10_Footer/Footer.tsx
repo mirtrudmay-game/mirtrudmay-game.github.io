@@ -49,7 +49,7 @@ function Footer() {
           <div className={styles.contacts}>
             <h4 className={styles.title}>Контакты</h4>
             <div className={styles.text}>
-              <a href={""}><span>mirtrudmay.game@gmail.com</span></a>
+              <a href={"mailto:mirtrudmay.game@gmail.com"}><span>mirtrudmay.game@gmail.com</span></a>
             </div>
           </div>
           <div className={styles.promo}>
