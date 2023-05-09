@@ -1430,7 +1430,7 @@ body {
 }
 .NBtE9Hw21myJA3z7Z0AQ {
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 @media ((max-width: 576px)) {
   .NBtE9Hw21myJA3z7Z0AQ {
@@ -1454,6 +1454,7 @@ body {
   }
 }
 .bRb7bBPuzznNRHUE7eLX .F3HWdUiObNbel_GuqqBp {
+  z-index: 10;
   font-size: 0.8em;
   margin-left: 1em;
 }
