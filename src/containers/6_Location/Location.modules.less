@@ -63,6 +63,7 @@
   align-items: start;
 
   @media(@_xs) {
+    align-items: center;
     justify-self: center;
     order: 1;
   }
@@ -97,7 +98,24 @@
   line-height: 1.2em;
   letter-spacing: 0.05em;
 
-  @media(@_sm) {
+  @media (@_sm) {
     font-size: calc(1em + 0.5vw);
+  }
+}
+
+.toggle {
+  position: absolute;
+  z-index: 10;
+  right: clamp(50px, 15%, 450px);
+  bottom: clamp(50px, 30%, 450px);
+
+  @media (@_sm) {
+    right: 30px;
+    bottom: 120px;
+  }
+
+  @media (@_xs) {
+    right: 10px;
+    bottom: 100px;
   }
 }

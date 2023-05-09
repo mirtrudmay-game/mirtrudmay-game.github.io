@@ -5,9 +5,10 @@ import { ContentButton } from '@src/components/Button/ContentButton';
 import { Title } from '@src/components/Title/Title';
 import phone_xl from '@src/assets/phone.png';
 import phone_xs from '@src/assets/phone_xs.png';
-import bg_lg from '@src/assets/participate.png'
-import bg_md from '@src/assets/participate_md.png'
-import bg_xs from '@src/assets/participate_xs.png'
+import bg_lg from '@src/assets/participate.png';
+import bg_md from '@src/assets/participate_md.png';
+import bg_xs from '@src/assets/participate_xs.png';
+import toggle_up from '@src/assets/toggle_up.svg';
 
 interface ITextBlock {
   title: string;
@@ -23,7 +24,7 @@ const TextBlock: FC<ITextBlock> = ({ title, desc }) => (
 
 export function Location() {
   return (
-    <section className={styles.page} id="location">
+    <section className={styles.page} id='location'>
       <div className={styles.background}>
         <img className={styles.backgroundImg} srcSet={`${bg_lg} 3840w, ${bg_md} 2400w, ${bg_xs} 1292w`}
              src={bg_lg} sizes={`(min-width: 767px) 100vw, 0vw`} />
@@ -33,7 +34,8 @@ export function Location() {
 
           <div className={styles.content}>
             <div className={styles.image}>
-              <img srcSet={`${phone_xl} 1386w, ${phone_xs} 980w`} sizes={`(min-width: 767px) 50vw, 100vw`} alt={''}></img>
+              <img srcSet={`${phone_xl} 1386w, ${phone_xs} 980w`} sizes={`(min-width: 767px) 50vw, 100vw`}
+                   alt={''}></img>
             </div>
 
             <div className={styles.location}>
@@ -51,6 +53,9 @@ export function Location() {
               <ContentButton text={'Хочу участвовать'} />
             </div>
           </div>
+          <a href={'#header'} className={styles.toggle}>
+            <img width={75} src={toggle_up} />
+          </a>
         </div>
 
       </div>

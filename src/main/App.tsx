@@ -1,5 +1,5 @@
 import React from 'react';
-import SmoothScroll from "smooth-scroll";
+import SmoothScroll from 'smooth-scroll';
 
 import { Navbar } from '@src/containers/0_Navbar/Navbar';
 import { Header } from '@src/containers/1_Header/Header';
@@ -7,11 +7,13 @@ import { Blocks } from '@src/containers/3_Blocks/Blocks';
 import { Program } from '@src/containers/4_Program/Program';
 import Footer from '@src/containers/10_Footer/Footer';
 import { About } from '@src/containers/2_About/About';
+import { AboutSM } from '@src/containers/2_About/AboutSM';
+import { Location } from '@src/containers/6_Location/Location';
 import { Toggles } from '@src/containers/5_Toggle/Toggles';
 
 import styles from './App.modules.less';
-import { Location } from '@src/containers/6_Location/Location';
-import { AboutSM } from '@src/containers/2_About/AboutSM';
+
+/*import toggle_up from "@src/assets/toggle_up.svg"*/
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -42,6 +44,9 @@ export const App = () => {
          <Toggles />
         <Location/>
       </main>
+      {/*      <div className={styles.toggle}>
+        <img width={75} src={toggle_up}/>
+      </div>*/}
       <footer className={styles.footer}>
         <Footer />
       </footer>
