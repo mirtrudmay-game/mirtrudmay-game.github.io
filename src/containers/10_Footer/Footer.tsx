@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './Footer.modules.less';
 import Logo from '@src/components/Logo/Logo';
 import vk from '@src/assets/vk.svg';
+import document from '@src/assets/document.svg';
+import mail from '@src/assets/mail.svg';
 
 function Footer() {
   return (
@@ -37,7 +39,8 @@ function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href={''} className={styles.documentLink}>
+                  <a href={''} className={styles.linkWithImg}>
+                    <img src={document} width={20}></img>
                     Положение
                   </a>
                 </li>
@@ -49,13 +52,15 @@ function Footer() {
           <div className={styles.contacts}>
             <h4 className={styles.title}>Контакты</h4>
             <div className={styles.text}>
-              <a href={"mailto:mirtrudmay.game@gmail.com"}><span>mirtrudmay.game@gmail.com</span></a>
+              <a href={"mailto:mirtrudmay.game@gmail.com"} className={styles.linkWithImg}>
+                <img src={mail} width={20}></img>
+                <span>mirtrudmay.game@gmail.com</span></a>
             </div>
           </div>
           <div className={styles.promo}>
             <h4 className={styles.title}>Присоединяйся к нам в соцсетях!</h4>
             <a href={'https://vk.com/mirtrudmay.game'} className={styles.vk}>
-              <img src={vk} alt={'Ссылка на группу ВКонтакте'}></img>
+              <img width={25} src={vk} alt={'Ссылка на группу ВКонтакте'}></img>
             </a>
           </div>
 
