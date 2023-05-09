@@ -19,9 +19,16 @@
 .contentButton {
   .button;
   color: @white-color;
-  background-color: @red-background;
+  background: linear-gradient(to left, @red-background 25%, 40%, @purple-text-color) right;
+  background-size: 400% 100%;
+  transition: .5s;
   font-size: clamp(18px, calc(1em + 0.5vw), 22px);
   box-shadow: 4px 4px 30px rgba(209, 18, 15, 0.3);
+}
+
+.contentButton:hover {
+  background-position: left;
+  box-shadow: 4px 4px 30px 4px @purple-text-color;
 }
 
 .navButton {
