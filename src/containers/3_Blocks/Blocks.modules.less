@@ -37,6 +37,10 @@
     top: 5%;
     left: -5%;
   }
+
+  @media(@_sm) {
+    display: none;
+  }
 }
 
 .hash_r {
@@ -53,6 +57,10 @@
     top: 5%;
     right: -5%;
   }
+
+  @media(@_sm) {
+    display: none;
+  }
 }
 
 .container {
@@ -60,7 +68,8 @@
 }
 
 .content {
-  ._content;
+  padding-top: @content_padding_top;
+  padding-bottom: @content_padding_bottom;
 
   display: grid;
   grid-template-columns: 50% 40%;
@@ -84,6 +93,7 @@
 
   & img {
     position: absolute;
+    max-width: 100%;
     height: 100%;
     left: 50%;
     transform: translateX(-40%);
@@ -91,7 +101,14 @@
 
   @media(@_sm) {
     order: 2;
+
+    & img {
+      max-width: 90%;
+      transform: translateX(-50%);
+    }
   }
+
+
 }
 
 .blocks {

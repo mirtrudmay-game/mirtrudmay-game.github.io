@@ -34,8 +34,9 @@
   justify-items: start;
 
   @media(@_lg) {
+    grid-gap: 10px 80px;
     padding: 170px 0 0 10%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: fit-content(50%) fit-content(50%);
     grid-template-areas:
           "L I"
           "C I"
@@ -44,6 +45,7 @@
   }
 
   @media(@_sm) {
+    grid-gap: 10px 50px;
     padding: 170px 0 50px 5%;
     grid-template-areas:
           "L I"
@@ -51,7 +53,6 @@
           "C C"
           "CR CR";
   }
-
 }
 
 .logo {

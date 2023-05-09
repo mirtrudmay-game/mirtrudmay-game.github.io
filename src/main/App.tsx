@@ -30,8 +30,6 @@ export const App = () => {
   }, []);
 
 
-
-
   return (
     <div className={styles.wrapper}>
       <header className={styles.header}>{<Navbar />}</header>
@@ -41,7 +39,7 @@ export const App = () => {
 
         <Blocks />
         <Program />
-        <Toggles />
+         <Toggles />
         <Location/>
       </main>
       <footer className={styles.footer}>

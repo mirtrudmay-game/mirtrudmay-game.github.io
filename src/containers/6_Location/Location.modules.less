@@ -22,6 +22,10 @@
   object-fit: contain;
   z-index: -1;
 
+  @media(@_sm) {
+    display: none;
+  }
+
 }
 
 .container {
@@ -29,7 +33,8 @@
 }
 
 .content {
-  ._content;
+  padding-top: clamp(30px, 5.5%, 85px);
+  padding-bottom: clamp(30px, 7.5%, 120px);
 
   display: grid;
   grid-template-columns: 1fr 1fr;

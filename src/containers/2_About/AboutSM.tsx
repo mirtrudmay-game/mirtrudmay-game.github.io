@@ -15,9 +15,8 @@ export function AboutSM() {
 
         <div className={styles.content}>
           <div className={styles.promoTop}>
-
             <img className={styles.circle} src={circle} />
-            <p className={styles.textSM}>
+            <p className={styles.text_sm}>
               Присоединяйся к нашей интеллектуальной игре, ты узнаешь много
               нового о профессиях, актуальных и для Ярославской области.
             </p>
@@ -25,7 +24,7 @@ export function AboutSM() {
 
           <div className={styles.promoBottom}>
             <img className={styles.circle} src={circle} />
-            <p className={styles.textSM}>
+            <p className={styles.text_sm}>
               Игра будет проходить в рамках квиза в несколько этапов: фильмы и
               мультфильмы, музыкальный блок, логические вопросы, загадки и
               многое другое.

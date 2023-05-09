@@ -39,11 +39,12 @@
 }
 
 .content {
-  ._content;
-
   display: grid;
   grid-template-columns: fit-content(45%) fit-content(35%);
   justify-content:  space-evenly;
+
+  padding-top: @content_padding_top;
+  padding-bottom: @content_padding_bottom;
 
   @media(@_lg) {
     grid-template-columns: fit-content(50%) fit-content(35%);
@@ -55,13 +56,13 @@
 
   @media(@_sm) {
     grid-template-columns: 1fr 0.5fr 1fr;
-    grid-template-rows: minmax(210px, 30%) minmax(190px, 25%) 50%;
+    grid-template-rows: minmax(200px, 25%) minmax(220px, 25%) 1fr;
     align-items: center;
   }
 
   @media(@_xs) {
-    grid-template-columns: 1fr 3.5fr 1fr;
-    grid-template-rows: minmax(265px, 27.5%) minmax(265px, 25%) 45%;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: minmax(290px, 25%) minmax(300px, 25%) 1fr;
   }
 }
 
@@ -71,6 +72,11 @@
   width: 100%;
   height: 100%;
   z-index: -1;
+
+/*  @media(@_sm) {
+    height: 110%;
+    top: -5%;
+  }*/
 }
 
 .promo {
@@ -92,15 +98,17 @@
   position: relative;
   grid-column: 1/3;
   grid-row: 1/2;
+  height: 100%;
 }
 
 .promoBottom {
   position: relative;
   grid-column: 2/4;
   grid-row: 2/3;
+  height: 100%;
 }
 
-.textSM {
+.text_sm {
   display: flex;
   align-items: center;
   height: 100%;
@@ -155,15 +163,14 @@
   grid-column: 1/4;
   grid-row: 3/4;
   margin-top: 15%;
-
 }
 
 .student {
   position: relative;
   height: 100%;
+  max-width: 80%;
   left: 50%;
   transform: translate(-50%);
-
 }
 
 /**
@@ -213,11 +220,16 @@
 
 .animation {
   position: absolute;
-  width: 100%;
+  max-width: 80%;
   height: 50%;
   top: 0;
   left:0;
   z-index: -1;
+
+  @media(@_sm) {
+    width: 85%;
+    left: 7.5%;
+  }
 
   -webkit-animation-name: rotation;
   -webkit-animation-duration: 5s;
