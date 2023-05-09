@@ -34,6 +34,11 @@ export function Location() {
 
           <div className={styles.content}>
             <div className={styles.image}>
+              <div className={styles.phoneText}>
+                <p>Остались вопросы, пиши:</p>
+                <p className={styles.smallText}>mirtrudmay.game@gmail.com</p>
+              </div>
+
               <img srcSet={`${phone_xl} 1386w, ${phone_xs} 980w`} sizes={`(min-width: 767px) 50vw, 100vw`}
                    alt={''}></img>
             </div>

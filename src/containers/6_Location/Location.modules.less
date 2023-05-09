@@ -37,23 +37,45 @@
   padding-bottom: clamp(30px, 7.5%, 120px);
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 55% 1fr;
 
-  @media(@_sm) {
+  @media (@_sm) {
     grid-gap: 5% 0;
   }
 
-  @media(@_xs) {
+  @media (@_xs) {
     grid-template-columns: 1fr;
   }
 }
 
 .image {
+  position: relative;
   z-index: -1;
 
-  @media(@_xs) {
+  @media (@_xs) {
     order: 2;
     justify-self: center;
+  }
+}
+
+.phoneText {
+  position: absolute;
+  color: @purple-text-color;
+  font-weight: 500;
+  font-size: min(1.2vw, 0.95em);
+  top: 37.5%;
+  left: 50%;
+  transform: translate(-50%);
+  margin-left: 0.5em;
+
+  @media (@_xs) {
+    font-size: min(2.2vw, 0.95em);
+  }
+
+
+  & .smallText {
+    font-size: 0.8em;
+    margin-left: 1em;
   }
 }
 
@@ -62,7 +84,7 @@
   flex-direction: column;
   align-items: start;
 
-  @media(@_xs) {
+  @media (@_xs) {
     align-items: center;
     justify-self: center;
     order: 1;
