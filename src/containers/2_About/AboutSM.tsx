@@ -32,7 +32,7 @@ export function AboutSM() {
           </div>
 
           <div className={styles.imageSM}>
-            <img src={animated_text} id={'#Vector'} className={styles.animation} />
+            <img src={animated_text} className={styles.animation} />
             <img src={student} className={styles.student} alt='' />
           </div>
         </div>
