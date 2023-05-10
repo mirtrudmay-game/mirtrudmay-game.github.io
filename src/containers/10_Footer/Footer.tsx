@@ -4,6 +4,7 @@ import Logo from '@src/components/Logo/Logo';
 import vk from '@src/assets/vk.svg';
 import document from '@src/assets/document.svg';
 import mail from '@src/assets/mail.svg';
+import doc from '@src/assets/doc.pdf';
 
 function Footer() {
   return (
@@ -39,8 +40,8 @@ function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href={''} className={styles.linkWithImg}>
-                    <img src={document} width={20}></img>
+                  <a href={doc} target='_blank' rel='noreferrer' className={styles.linkWithImg}>
+                    <img src={document} width={20} alt={'Положение о мероприятии'}></img>
                     Положение
                   </a>
                 </li>
